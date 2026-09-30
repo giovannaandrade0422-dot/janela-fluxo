@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janela de Fluxo</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Janela de Fluxo</h1>
+
+        <p>Gestão financeira</p>
+
+        <button>☰</button>
+    </header>
+    <main>
+
+        <h2>Resumo financeiro</h2>
+        <p id="totalEntradas">Entradas: R$ 0,00</p>
+        <p id="totalDespesas">Despesas: R$ 0,00</p>
+        <p id="saldo">Saldo: R$ 0,00</p>
+
+        <h2>Nova movimentação</h2>
+        <p>Tipo</p>
+        <select>
+            <option>Selecione</option>
+            <option>Receita</option>
+            <option>Despesa</option>
+
+        </select>
+
+        <p>Descrição</p>
+
+        <input type="text" id="descricao" placeholder="Ex: venda de produto">
+
+        <p>Valor</p>
+
+        <input type="number" id="valor" placeholder="0,00">
+
+        <p>Data</p>
+
+        <input type="date" id="data">
+        <p>Tipo</p>
+        <select id="tipo">
+            <option value="entrada">Entrada</option>
+            <option value="saída">Saída</option>
+        </select>
+
+        <p>Categoria</p>
+        <select id="categoria">
+
+            <option>Selecione</option>
+            <option>Vendas</option>
+            <option>Salário</option>
+            <option>Alimentação</option>
+            <option>Transporte</option>
+            <option>Contas</option>
+            <option>Outros</option>
+
+        </select>
+
+        <br><br>
+
+        <button>Adicionar movimentação</button>
+
+<div id="areaMovimentacoes">
+
+    <h2>Movimentações</h2>
+
+    <p>Filtrar por tipo</p>
+
+    <select id="filtroTipo">
+        <option value="todos">Todos</option>
+        <option value="entrada">Entrada</option>
+        <option value="saída">Saída</option>
+    </select>
+
+    <p>Filtrar por categoria</p>
+
+    <select id="filtroCategoria">
+        <option value="todas">Todas</option>
+        <option value="Vendas">Vendas</option>
+        <option value="Salário">Salário</option>
+        <option value="Alimentação">Alimentação</option>
+        <option value="Transporte">Transporte</option>
+        <option value="Contas">Contas</option>
+        <option value="Outros">Outros</option>
+    </select>
+
+    <p>Data inicial</p>
+
+    <input type="date" id="filtroDataInicial">
+
+    <p>Data final</p>
+
+    <input type="date" id="filtroDataFinal">
+
+    <div id="listaMovimentacoes"></div>
+
+    <p>adicione uma nova movimentação para começar.</p>
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
